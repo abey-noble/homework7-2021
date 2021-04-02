@@ -8,10 +8,18 @@ window.addEventListener("load", function() {
 // display play video to console
 // play video
 // change volume text
+var count = 0;
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	document.getElementById("volume").innerHTML = " 100%"
+	if (count == 0){
+		document.getElementById("volume").innerHTML = "100%";
+	}
+	else{
+		document.getElementById("volume").innerHTML = volume.innerHTML;
+	}
+	count = count + 1;
+	
 });
 
 document.getElementById("pause").addEventListener("click", function() {
@@ -59,11 +67,11 @@ document.getElementById("mute").addEventListener("click", function() {
 	}
 } )
 
-
+var volume = document.getElementById("volume");
 document.getElementById("slider").addEventListener("change", function() {
 	video.volume = (document.getElementById("slider").value) / 100; 
 	console.log(video.volume);
-	document.getElementById("volume").innerHTML = (video.volume * 100) + "%";
+	volume.innerHTML = (video.volume * 100) + "%";
 })
 
 document.getElementById("vintage").addEventListener("click", function (){
