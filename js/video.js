@@ -63,7 +63,7 @@ document.getElementById("mute").addEventListener("click", function() {
 document.getElementById("slider").addEventListener("change", function() {
 	video.volume = (document.getElementById("slider").value) / 100; 
 	console.log(video.volume);
-	document.getElementById("volume").innerHTML = video.volume;
+	document.getElementById("volume").innerHTML = (video.volume * 100) + "%";
 })
 
 document.getElementById("vintage").addEventListener("click", function (){
