@@ -60,8 +60,19 @@ document.getElementById("mute").addEventListener("click", function() {
 } )
 
 
+// document.getElementById("slider").addEventListener("onchange", function() {
+// 	console.log(video.volume);
+// 	document.getElementById("volume").innerHTML = video.volume;
+// })
 
+document.getElementById("vintage").addEventListener("click", function (){
+	video.classList.add(".oldSchool")
+})
 
+document.getElementById("orig").addEventListener("click", function (){
+	video.classList.remove(".oldSchool")
+	
+})
 
 
 
